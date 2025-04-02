@@ -5,13 +5,13 @@ defmodule Aggregators do
 
   def median(list) do
     n = length(list)
-    case rem(n,2) do
-      1 ->
-        Enum.at(list, div(n,2))
-      _ ->
-        x = Enum.at(list, div(n,2) - 1)
-        y = Enum.at(list, div(n,2))
-       (x+y)/2
+
+    if rem(n,2) == 1 do
+      Enum.at(list, div(n,2))
+    else
+      x = Enum.at(list, div(n,2) - 1)
+      y = Enum.at(list, div(n,2))
+      (x+y)/2
     end
   end
 
