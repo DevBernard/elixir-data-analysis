@@ -21,3 +21,6 @@ elixir_data_analysis-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+#mix.lock
+*.lock
